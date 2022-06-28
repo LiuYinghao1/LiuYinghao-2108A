@@ -10,7 +10,7 @@ const publicRoutes = [
   {
     path: '/home',
     name: 'home',
-    component: () => import('../views/login/home')
+    component: () => import('../views/layer/home')
   }
 ]
 
