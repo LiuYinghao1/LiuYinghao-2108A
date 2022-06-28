@@ -7,6 +7,8 @@ import md5 from 'md5'
 
 import loading from './loading'
 
+import { ElMessage } from 'element-plus'
+
 /**
  * 创建axio s实例对象
  * */
@@ -44,12 +46,19 @@ service.interceptors.response.use(
     // TODO token过期状态
 
     // TODO 全局响应处理
-
-    return response
+    const { message, success, data } = response.data
+    if (success) {
+      return data
+    } else {
+      ElMessage.error(message)
+      return Promise.reject(new Error(message))
+    }
   },
   (error) => {
     // 关闭loading加载
     loading.close()
+    // 响应失败提示
+    ElMessage.error(error.message)
     return Promise.reject(error)
   }
 )

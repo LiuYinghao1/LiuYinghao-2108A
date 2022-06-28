@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "core-js": "^3.8.3",
     "element-plus": "^2.2.6",
     "md5": "^2.3.0",
     "vue": "^3.2.13",
@@ -28,6 +27,7 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
+    "core-js": "^3.23.3",
     "cz-customizable": "^6.3.0",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",

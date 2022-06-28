@@ -5,12 +5,12 @@ const publicRoutes = [
   {
     path: '/',
     name: 'login',
-    component: () => import('../views/login/index')
+    component: () => import('../views/login')
   },
   {
-    path: '/home',
-    name: 'home',
-    component: () => import('../views/layer/home')
+    path: '/index',
+    name: 'index',
+    component: () => import('../layout')
   }
 ]
 
