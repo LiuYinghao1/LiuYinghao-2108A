@@ -43,12 +43,14 @@
 
 <script setup>
 import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 import { reactive, ref, computed } from 'vue'
 import { validatePassword } from './rule'
 import md5 from 'md5'
 import util from '@/utils/util'
 
 const store = useStore()
+const router = useRouter()
 
 const inputType = ref('password')
 const LoginForm = ref()
@@ -89,8 +91,8 @@ const handleLoginSubmit = async () => {
       const newLoginForm = util.deepCopy(loginForm)
       newLoginForm.password = md5(newLoginForm.password)
       store.dispatch('user/login', newLoginForm)
-      // console.log(response)
     }
+    router.push('/home')
   })
 }
 

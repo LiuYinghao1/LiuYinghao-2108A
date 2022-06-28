@@ -3,9 +3,14 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // 公有路由表
 const publicRoutes = [
   {
-    path: '/login',
+    path: '/',
     name: 'login',
-    component: () => import('../views/login')
+    component: () => import('../views/login/index')
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import('../views/login/home')
   }
 ]
 
