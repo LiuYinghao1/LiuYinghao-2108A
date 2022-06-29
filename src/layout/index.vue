@@ -13,9 +13,9 @@
   </div>
 </template>
 <script setup>
-import Sidebar from '@/components/Sidebar'
-import Navbar from '@/components/Navbar'
-import AppMain from '@/components/AppMain'
+import Sidebar from '@/layout/Sidebar'
+import Navbar from '@/layout/Navbar'
+import AppMain from '@/layout/AppMain'
 </script>
 <style lang="scss" scoped>
 .app-wrapper {
