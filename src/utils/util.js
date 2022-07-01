@@ -1,5 +1,7 @@
 /**
  * 检测数据类型方法
+ * @param {*} data
+ * @returns
  */
 const checkDataType = (data) => {
   const dataType = Object.prototype.toString.call(data)
@@ -10,8 +12,8 @@ const checkDataType = (data) => {
     '[object Function]': 'function',
     '[object Array]': 'array',
     '[object Date]': 'date',
-    '[object RegExp]': 'regexp',
-    '[object Undefind]': 'undefined',
+    '[object RegExp]': 'regExp',
+    '[object Undefined]': 'undefined',
     '[object Null]': 'null',
     '[object Object]': 'object'
   }
@@ -23,7 +25,6 @@ const checkDataType = (data) => {
  * @param {*} data
  * @returns
  */
-
 const deepCopy = (data) => {
   const type = checkDataType(data)
   let params = null

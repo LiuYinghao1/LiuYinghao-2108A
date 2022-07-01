@@ -44,11 +44,10 @@ import AppMain from '@/layout/AppMain'
     .fixed-header {
       position: fixed;
       top: 0;
-      height: 10%;
+      height: 100px;
       right: 0;
       z-index: 9;
-      background-color: #ccc;
-
+      background-color: #fff;
       width: calc(100% - 210px);
     }
   }
